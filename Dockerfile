@@ -31,10 +31,4 @@ RUN service apache2 relaod
 ##################### INSTALLATION END #####################
 
 # Expose the default port
-EXPOSE 27017
-
-# Default port to execute the entrypoint (MongoDB)
-CMD ["--port 27017"]
-
-# Set default container command
-ENTRYPOINT usr/bin/mongod
+EXPOSE 80
