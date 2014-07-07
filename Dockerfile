@@ -33,8 +33,6 @@ RUN a2dissite 000-default
 #enable our vhost
 RUN a2ensite apache2-graphite
 
-#apache reload
-RUN service apache2 reload
 RUN service carbon-cache start
 
 ##################### INSTALLATION END #####################
