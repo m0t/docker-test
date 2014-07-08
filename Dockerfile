@@ -19,7 +19,7 @@ RUN sed -i "s/CARBON_CACHE_ENABLED=false/CARBON_CACHE_ENABLED=true/" /etc/defaul
 #is loaded manually after db creation from a json dump
 RUN echo no|graphite-manage syncdb
 RUN wget https://raw.githubusercontent.com/m0t/docker-test/master/initial.json 
-RUN graphite-manage loaddata inital.json
+RUN graphite-manage loaddata initial.json
 RUN rm initial.json
 #set owner to graphite
 RUN chown _graphite:_graphite /var/lib/graphite/graphite.db
